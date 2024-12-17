@@ -28,14 +28,37 @@ void main(){
             continue;
         }
         /* If a digit is in the same index increase the cow If it is somewhere else increase the bull*/
-        for (var i = 0; i < randomNumber.length; i++){
-            if (chosenNumber[i] == randomNumber[i]){
-                cows += 1;
-            }
-            else if (randomNumber.contains(chosenNumber[i])){
-                bulls += 1;
+        List<bool> l = [false,false,false,false];
+        for(int i=0;i<str.length;i++)
+        {
+            if(str[i]==b[i])
+            {
+                cow++;
+                x[i]=true;
             }
         }
-        print("\nAttempts: $attempts \nCows: $cows, Bulls: $bulls");
+        for(int i=0;i<str.length;i++)
+        {
+            bool y=false;
+            if(x[i]==false)
+            {
+                for(int j=0;j<str.length;j++)
+                {
+                    if(x[j]!=true && str[j]==b[i])
+                    {
+                        y=true;
+                        x[j]=true;
+                        break;
+                        
+                    }
+                }
+                if(y==true)
+                {
+                    bull++;
+                }
+            }
+            
+        }
+        print("$cow cows and $bull bulls");
     }
 }
