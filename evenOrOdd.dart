@@ -12,3 +12,7 @@ void main(){
     }
 
 }
+
+// Output : 
+// Hi, please choose a number : 48
+// 48 number is even
