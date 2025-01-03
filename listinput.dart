@@ -6,5 +6,7 @@ void main(){
                     .split(RegExp(r'\s+'))
                     .map(int.parse)
                     .toList();
+
+                    
     print(l);
 }
